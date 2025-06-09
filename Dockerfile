@@ -2,6 +2,7 @@ FROM kicad/kicad:9.0
 
 USER root
 
+RUN kicad-cli --version
 RUN apt-get update && \
     apt-get install -y --no-install-recommends wget fontconfig && \
     mkdir -p /usr/share/fonts/truetype/ubuntu && \
